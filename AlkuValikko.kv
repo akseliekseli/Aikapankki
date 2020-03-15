@@ -1,0 +1,44 @@
+<AlkuValikko>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgba: 0.1,1,0.01, 0.5
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        GridLayout:
+            pos_hint: {"top": 1.26, "left": .5}
+            rows: 1
+            Image:
+                source: 'tulenjohtologo.png'
+                size: 100, 200
+        GridLayout:
+            padding: 20
+            spacing: 20
+            rows: 1
+            pos_hint: {"top": .5, "left": 1}
+            size_hint: 1, .1
+            Label:
+                font_size: 40
+                text: 'TJL:n aikapankki'
+        GridLayout:
+            padding: 20
+            spacing: 10
+            rows: 1
+            pos_hint: {"bottom": .5, "right": 1}
+            size_hint: .5, .2
+            Button:
+                text: "Aikapankkiin"
+                on_press:
+                    app.change_screen('aamu_pankki')  
+        GridLayout:
+            padding: 20
+            spacing: 10
+            rows: 1
+            pos_hint: {"bottom": .5, "left": 1}
+            size_hint: .5, .2
+            Button:
+                text: 'Muuta saldoa'
+                on_press:
+                    app.change_screen('muutos_sivu')
+        

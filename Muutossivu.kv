@@ -1,0 +1,45 @@
+<Muutossivu>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgba: 0.1,1,0.01, 0.5
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        GridLayout:
+            spacing: 20
+            padding: 30
+            rows: 6
+            pos_hint: {"top": 1, "left": 1}
+            size_hint: 1, .8
+            Label:
+                text: 'Muuta aikapankin saldoa'
+            TextInput:
+                id: saldo_muutos
+            Label:
+                text: 'Salasana'
+            TextInput:
+                id: salasana
+
+            Button:
+                text: "Taas sekoiltu"
+                on_press:
+                    app.lisaa(saldo_muutos.text, salasana.text)  
+            Button:
+                text: 'Tyhjennetty pankkia'
+                on_press:
+                    app.vahenna(saldo_muutos.text, salasana.text)
+            
+        GridLayout:
+            spacing: 20
+            padding: 10
+            rows: 1
+            pos_hint: {"bottom": .5, "right": 1}
+            size_hint: .5, .2
+            Button:
+                text: "Aikapankkiin"
+                on_press:
+                    app.change_screen('aamu_pankki')
+
+
+        

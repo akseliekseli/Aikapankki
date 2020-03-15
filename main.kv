@@ -1,0 +1,16 @@
+#:include KivyApps/AlkuValikko.kv
+#:include KivyApps/Aamupankki.kv
+#:include KivyApps/Muutossivu.kv
+GridLayout:
+    cols: 1
+    ScreenManager:
+        id: screen_manager
+        AlkuValikko:
+            name: "alku_valikko"
+            id: alku_valikko
+        Aamupankki:
+            name: "aamu_pankki"
+            id: aamu_pankki
+        Muutossivu:
+            name: "muutos_sivu"
+            id: muutos_sivu
